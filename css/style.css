@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 120px;
 }
 
 .forminput input{
@@ -23,13 +23,14 @@ body{
 }
 
 #textbox{
-    margin-bottom: 15px;
+    width: 400px;
 }
 
 #submit{
     background-color: lavender;
+    width: 100px;
 }
 
 #submit:hover{
-    background: linear-gradient(154deg, indigo, blue, green, yellow, orange, red);
+    background-color: gainsboro;
 }
