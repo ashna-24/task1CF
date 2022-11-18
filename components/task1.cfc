@@ -1,35 +1,24 @@
-<html>
-    <body>
-        <cfif structKeyExists(form, "submit")
-            <cfif form.textinput eq "1">
-                <h4>OK</h4>
-                <cfelseif form.textinput eq "2">
-                    <h4>OK</h4>
-                <cfelseif form.textinput eq "3">
-                    <h4>Fair</h4>
-                <cfelseif form.textinput eq "4">
-                    <h4>Good</h4>
-                <cfelseif form.textinput eq "5">
-                    <h4>Very Good</h4>
+<cfcomponent>
+    <cffunction  name="getNumbers" access="remote">
+       <!---  <cfargument name="number" type="numeric" required="false" default=""> --->
+            <cfdump  var="#form.textbox#">
+            
+        <!--- <cfif structKeyExists(form, 'submit')>
+            <cfif argument.number eq "1">
+                <cfreturn "Ok"/>
+                <cfelseif argument.number eq "2">
+                    <cfreturn "Ok"/> 
+                <cfelseif argument.number eq "3">
+                    <cfreturn "Fair"/>
+                <cfelseif argument.number eq "4">
+                    <cfreturn "Good"/>
+                <cfelseif argument.number eq "5">
+                    <cfreturn "Very Good"/>
                 <cfelse>
-                    <h4></h4>
-            </cfif>
-        </cfif>
-    </body>
-</html>
-
-<!--- function printoutput(){
-    <cfif form.field eq "1">
-        <h3>Ok</h3>
-    <cfelseif form.field eq "2">
-        <h3>Ok</h3>
-    <cfelseif form.field eq "3">
-        <h3>Fair</h3>
-    <cfelseif form.field eq "4">
-        <h3>Good</h3>
-    <cfelseif form.field eq "5">
-        <h3>Very Good</h3>
-    <cfelse>
-        <h3>Invalid</h3>
-    </cfif>
-} --->
+                    <cfreturn false/>
+            </cfif> --->
+                    <!--- <cfelse>
+                        <cflocation url="127.0.0.1:8500/CFTask/index.cfm" addToken="no"> --->
+        <!--- </cfif> --->
+    </cffunction>
+</cfcomponent>
